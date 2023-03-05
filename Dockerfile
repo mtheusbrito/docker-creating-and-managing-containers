@@ -1,0 +1,8 @@
+FROM node:14.21.3-alpine
+WORKDIR /app-node
+ARG PORT=3333
+ENV PORT=$PORT_BUILD
+EXPOSE $PORT_BUILD
+COPY . .
+RUN npm install
+ENTRYPOINT npm start

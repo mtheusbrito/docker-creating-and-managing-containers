@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles/styles.css" />
+    </head>
+    <body>
+       it`s works!
+
+
+       <h2>Volumes</h2>
+       <pre>
+           docker run -it -v /home/matheus/volume-docker:/app ubuntu bash
+       </pre>
+        <h2>Volumes - mount</h2>
+        <pre>
+            docker run -it --mount source=meu-novo-volume,target=/app ubuntu bash
+        </pre>
+        
+       
+
+        <h2>Volumes - bind - mount</h2>
+
+        <pre>
+            docker run -it --mount type=bind,source=/home/mtheus/volume-docker, target=/app ubuntu bash
+        </pre>
+
+        <h2>Tmpfs</h2>
+        <pre>
+            docker run -it --mount type=tmpfs,destination=/app ubuntu bash
+        </pre>
+
+    </body>
+</html>
